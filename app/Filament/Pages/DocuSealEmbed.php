@@ -6,7 +6,21 @@ use Filament\Pages\Page;
 
 class DocuSealEmbed extends Page
 {
-    protected string $view = 'filament.pages.docu-seal-embed';
-    public $templateSlug = 'bQKax93zzA41j8';
-    public $email = 'fatma@element.ps';
+     protected static ?string $navigationLabel = 'DocuSeal';
+    protected static ?string $title = 'DocuSeal Embed';
+
+    protected   string $view = 'filament.pages.docu-seal-embed';
+
+    public ?string $templateSlug = null;
+    public ?string $email = null;
+    public ?string $name = null;
+
+
+
+     public function mount(): void
+    {
+        $this->templateSlug = request('templateSlug', 'bQKax93zzA41j8');
+        $this->email = request('email');
+        $this->name = request('name');
+    }
 }

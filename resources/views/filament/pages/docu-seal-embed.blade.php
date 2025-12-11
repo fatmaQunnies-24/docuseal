@@ -1,19 +1,20 @@
 <x-filament::page>
 
-     <script src="https://cdn.docuseal.com/js/form.js"></script>
+    <script src="https://cdn.docuseal.com/js/form.js"></script>
 
-     <docuseal-form
+    <docuseal-form
         id="docusealForm"
         data-src="https://docuseal.com/d/{{ $templateSlug }}"
-        data-email="{{ $email }}">
+        data-email="{{ $email }}"
+        data-name="{{ $name }}">
     </docuseal-form>
 
-     <script>
+    <script>
         window.addEventListener('DOMContentLoaded', () => {
             const form = document.getElementById('docusealForm');
 
             form.addEventListener('completed', (e) => {
-                console.log('Form Completed:', e.detail);
+                console.log('DocuSeal Completed:', e.detail);
             });
         });
     </script>
