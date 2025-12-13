@@ -18,8 +18,9 @@ class EditUser extends EditRecord
         return [
             Action::make('openDocuSeal')
                 ->label('Sign Document')
-                ->url(fn() => url('/admin/docu-seal-embed?email=' . $this->record->email . '&name=' . $this->record->name))
+                ->url(fn() => url('/admin/docu-seal-embed?templateSlug=bQKax93zzA41j8&email=' . $this->record->email . '&name=' . $this->record->name))
                 ->openUrlInNewTab(),
+
 
             DeleteAction::make(),
         ];

@@ -16,11 +16,11 @@ class DocuSealEmbed extends Page
     public ?string $name = null;
 
 
-
-     public function mount(): void
+    public function mount(): void
     {
         $this->templateSlug = request('templateSlug', 'bQKax93zzA41j8');
-        $this->email = request('email');
-        $this->name = request('name');
+
+        $this->name = request('name', '');
+             $this->email = request('email', '');
     }
 }
