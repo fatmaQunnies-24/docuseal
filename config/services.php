@@ -37,7 +37,7 @@ return [
     'docuseal' => [
         'secret' => env('DOCUSEAL_SECRET'),
         'template_id' => env('DOCUSEAL_TEMPLATE_ID'),
-
+        'webhook_token' => env('DOCUSEAL_WEBHOOK_TOKEN'),
     ],
 
 
