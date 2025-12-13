@@ -36,6 +36,8 @@ return [
     ],
     'docuseal' => [
         'secret' => env('DOCUSEAL_SECRET'),
+        'template_id' => env('DOCUSEAL_TEMPLATE_ID'),
+
     ],
 
 
